@@ -11,6 +11,11 @@ class StringCalculatorTest(TestCase):
         test_string = ''
         expected_number = 0
         self.assertEqual(self.string_calculator.add(test_string), expected_number)
+    
+    def test_string_calculator_one_value(self):
+        test_string = '3'
+        expected_number = 3
+        self.assertEqual(self.string_calculator.add(test_string), expected_number)
 
 
 unittest.main(argv=[''],verbosity=2, exit=False)
