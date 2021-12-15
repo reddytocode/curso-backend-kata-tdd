@@ -17,7 +17,7 @@ class StringCalculatorTest(TestCase):
         expected_number = 3
         self.assertEqual(self.string_calculator.add(test_string), expected_number)
 
-    def test_string_calculator_two_values(self):
+    def test_string_calculator_two_values_delimited(self):
         test_string = '10,20'
         expected_number = 30
         self.assertEqual(self.string_calculator.add(test_string), expected_number)
@@ -25,6 +25,11 @@ class StringCalculatorTest(TestCase):
     def test_string_calculator_two_lines_values(self):
         test_string = '1\n2'
         expected_number = 3
+        self.assertEqual(self.string_calculator.add(test_string), expected_number)
+
+    def test_string_calculator_two_lines_values_delimited(self):
+        test_string = '1\n2,3\n4'
+        expected_number = 10
         self.assertEqual(self.string_calculator.add(test_string), expected_number)
 
 
