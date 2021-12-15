@@ -22,4 +22,10 @@ class StringCalculatorTest(TestCase):
         expected_number = 30
         self.assertEqual(self.string_calculator.add(test_string), expected_number)
 
+    def test_string_calculator_two_lines_values(self):
+        test_string = '1\n2'
+        expected_number = 3
+        self.assertEqual(self.string_calculator.add(test_string), expected_number)
+
+
 unittest.main(argv=[''],verbosity=2, exit=False)
