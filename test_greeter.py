@@ -1,9 +1,10 @@
+from unittest import TestCase
 import unittest
 from greeter import Greeter
 from freezegun import freeze_time
 
 
-class GreeterTest(unittest.TestCase):
+class GreeterTest(TestCase):
     @freeze_time("2012-01-01 13:45:01")
     def test_greet(self):
         test_name = "Daniel"
