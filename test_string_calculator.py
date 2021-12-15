@@ -31,6 +31,13 @@ class StringCalculatorTest(TestCase):
         test_string = '1\n2,3\n4'
         expected_number = 10
         self.assertEqual(self.string_calculator.add(test_string), expected_number)
+    
+    def test_string_calculator_negative_values_delimited(self):
+        test_string = '-1,2,-3'
+        expected_value_raised = 'negatives not allowed: -1,-3'
+        with self.assertRaises(Exception) as context:
+            self.string_calculator.add(test_string)
+        self.assertTrue(expected_value_raised in str(context.exception))
 
 
 unittest.main(argv=[''],verbosity=2, exit=False)
